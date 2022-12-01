@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     # 'rest_framework_swagger',
     'drf_yasg',
     'api',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -53,7 +54,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
+CORS_ALLOW_ALL_ORIGINS = True # If this is used then `CORS_ALLOWED_ORIGINS` will not have any effect
+CORS_ALLOW_CREDENTIALS = True
 ROOT_URLCONF = 'sample.urls'
 
 TEMPLATES = [
